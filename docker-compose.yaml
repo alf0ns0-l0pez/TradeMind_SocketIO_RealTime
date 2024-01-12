@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  trademind_socketio:
+    image: trademind_socketio:minerpunk
+    container_name: Trademind_Socketio
+    ports:
+      - 2020:2020
+    volumes:
+      - ./src:/app/src
+    command: npm run dev
+    restart: unless-stopped
+    tty: true
